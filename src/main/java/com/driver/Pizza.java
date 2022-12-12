@@ -63,19 +63,19 @@ public class Pizza {
         // your code goes here
        // String ret = "";
         if(isVeg)
-            bill = "Base Price Of The Pizza: 300 \n";
+            bill = "Base Price Of The Pizza: 300\n";
         else
-            bill = "Base Price Of The Pizza: 400 \n";
+            bill = "Base Price Of The Pizza: 400\n";
         if(cheeseFlag)
-            bill+= "Extra Cheese Added: 80 \n";
+            bill+= "Extra Cheese Added: 80\n";
         if(toppingsFlag){
             if(isVeg)
-                bill+="Extra Toppings Added: 70 \n";
+                bill+="Extra Toppings Added: 70\n";
             else
-                bill+= "Extra Toppings Added: 120 \n";
+                bill+= "Extra Toppings Added: 120\n";
         }
         if(takeAwayFlag)
-            bill+= "Paperbag Added: 20 \n";
+            bill+= "Paperbag Added: 20\n";
         bill+= "Total Price: " + price;
 
 
