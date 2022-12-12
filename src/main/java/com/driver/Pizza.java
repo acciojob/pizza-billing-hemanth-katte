@@ -76,7 +76,7 @@ public class Pizza {
         }
         if(takeAwayFlag)
             bill+= "Paperbag Added: 20 \n";
-        bill+= "Total price: " + price;
+        bill+= "Total Price: " + price;
 
 
 
