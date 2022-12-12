@@ -10,8 +10,8 @@ public class DeluxePizza extends Pizza {
            // super.price = 300;
         //else
            // super.price = 400;
-        super.addExtraCheese();
-        super.addExtraToppings();
+        this.addExtraCheese();
+        this.addExtraToppings();
 
 
     }
