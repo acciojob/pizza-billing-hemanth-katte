@@ -39,6 +39,7 @@ public class Pizza {
         this.isBillGenerated = false;
         this.cheese = 80;
         this.takeAway = 20;
+        this.bill = "Base Price Of The Pizza: "+price+"\n";
     }
 
     public int getPrice(){
@@ -48,9 +49,9 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         //check if extra cheese is added or not already
-        if(cheeseFlag == false) {
-            price += cheese;
-            cheeseFlag = true; //added the cheese
+        if(this.cheeseFlag == false) {
+            this.price += this.cheese;
+            this.cheeseFlag = true; //added the cheese
         }
     }
 
@@ -58,20 +59,20 @@ public class Pizza {
         // your code goes here
         //check if extra toppings is added already or not
 
-        if(toppingsFlag == false){
+        if(this.toppingsFlag == false){
             if(isVeg)
-                price+=toppings;
+                this.price+=this.toppings;
             else
-                price+=toppings;
-            toppingsFlag = true; //toppings added
+                this.price+=this.toppings;
+            this.toppingsFlag = true; //toppings added
         }
     }
 
     public void addTakeaway(){
         // your code goes here
-        if(takeAwayFlag == false){
-            price+=takeAway;
-            takeAwayFlag = true;
+        if(this.takeAwayFlag == false){
+            this.price+=this.takeAway;
+            this.takeAwayFlag = true;
         }
 
     }
@@ -79,22 +80,16 @@ public class Pizza {
     public String getBill(){
         // your code goes here
        // String ret = "";
-        if(isBillGenerated == false) {
-            if (isVeg)
-                bill = "Base Price Of The Pizza: 300" + "\n";
-            else
-                bill = "Base Price Of The Pizza: 400" + "\n";
-            if (cheeseFlag)
-                bill += "Extra Cheese Added: 80" + "\n";
-            if (toppingsFlag) {
-                if (isVeg)
-                    bill += "Extra Toppings Added: 70" + "\n";
-                else
-                    bill += "Extra Toppings Added: 120" + "\n";
+        if(this.isBillGenerated == false) {
+
+            if (this.cheeseFlag)
+                this.bill += "Extra Cheese Added: " + this.cheese + "\n";
+            if (this.toppingsFlag) {
+                this.bill += "Extra Toppings Added: " + this.toppings + "\n";
             }
-            if (takeAwayFlag)
-                bill += "Paperbag Added: 20" + "\n";
-            bill += "Total Price: " + price;
+            if (this.takeAwayFlag)
+                this.bill += "Paperbag Added: " + this.takeAway + "\n";
+            this.bill+="Total Price: "+ this.price +"\n";
             isBillGenerated = true;
 
         }
